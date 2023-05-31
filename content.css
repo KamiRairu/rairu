@@ -1,0 +1,67 @@
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #fae1dd;
+  
+}
+
+img {
+  width:770px;
+  height: 1270px;
+  position: relative;
+  top: 150px;
+  box-shadow: -5px -5px 100px rgba(0,0,0,0.4);
+  cursor: pointer;
+  animation: up 3s linear infinite;
+}
+
+@keyframes up {
+  0%, 100%{
+    transfrom: translateY(0);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+}
+
+ .letter h1 {
+  text-align: center;
+  font-family: 'Brush Script MT', cursive;
+}
+
+.shadow {
+  position: absolute;
+  width: 330px;
+  height: 25px;
+  border-radius:50%;
+  background-color: rgba(0,0,0,0.03);
+  top: 265px;
+  left: -15px;
+  z-index:-1;
+  animation: scale 3s linear infinite;
+}
+
+@keyframes scale {
+  0%, 100%{
+    transfrom: scaleX(1);
+  }
+  50% {
+    transform: scaleX(0.85);
+  }
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
